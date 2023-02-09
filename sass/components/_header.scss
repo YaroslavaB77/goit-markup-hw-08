@@ -1,0 +1,233 @@
+.menu {
+  display: none;
+}
+
+.header-border {
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+
+.logo {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+
+  &__secondary-color {
+    color: $brand-color;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 100px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 60px;
+
+  &__robotofonts &__home-page,
+  &__robotofonts &__current-page,
+  &__robotofonts &__contact-page,
+  &__robotofonts &__contacts {
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  &__menu {
+    position: relative;
+    list-style: none;
+  }
+
+  &__menu &__home-page,
+  &__menu &__current-page,
+  &__menu &__contact-page {
+    text-decoration: none;
+    color: rgba(33, 33, 33, 1);
+  }
+
+  &__menu &__home-page:hover,
+  &__menu &__current-page:hover,
+  &__menu &__contact-page:hover,
+  &__menu &__home-page:focus,
+  &__menu &_current-page:focus,
+  &__menu &__contact-page:focus {
+    color: $brand-color;
+  }
+
+  &__menu &__home-page:hover::after,
+  &__menu &__home-page:focus::after {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 4px;
+    left: 10px;
+    top: 36px;
+    background-color: $brand-color;
+    border-radius: 2px;
+  }
+
+  &__menu &__current-page:hover::after,
+  &__menu &__current-page:focus::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 4px;
+    left: 110px;
+    top: 36px;
+    background-color: $brand-color;
+    border-radius: 2px;
+  }
+
+  &__menu &__contact-page:hover::after,
+  &__menu &__contact-page:focus::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 4px;
+    left: 210px;
+    top: 36px;
+    background-color: $brand-color;
+    border-radius: 2px;
+  }
+
+  &__active-page &__current-page,
+  &__active-page &__home-page {
+    color: $brand-color;
+  }
+
+  &__active-page &__home-page::after {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 4px;
+    left: 10px;
+    top: 36px;
+    background-color: $brand-color;
+    border-radius: 2px;
+  }
+
+  &__active-page &__current-page::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 4px;
+    left: 110px;
+    top: 36px;
+    background-color: $brand-color;
+    border-radius: 2px;
+  }
+
+  & li {
+    display: inline-block;
+  }
+
+  &__home-page {
+    margin-left: 10px;
+  }
+
+  &__current-page {
+    margin-left: 46px;
+  }
+
+  &__contact-page {
+    margin-left: 46px;
+  }
+
+  &__contacts-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__contacts {
+    text-decoration: none;
+    color: $descriprion-color;
+  }
+
+  &__mail:hover,
+  &__phone:hover {
+    fill: $brand-color;
+    stroke: $brand-color;
+    color: $brand-color;
+  }
+
+  &__mail svg,
+  &__phone svg {
+    margin-right: 10px;
+    fill: $descriprion-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: contents;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__contacts-flex {
+    flex-direction: row;
+    margin-left: auto;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__mail {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__menu .header__home-page:hover::after,
+  .header__menu .header__home-page:focus::after {
+    left: 8px;
+    top: 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__menu .header__current-page:hover::after,
+  .header__menu .header__current-page:focus::after {
+    left: 108px;
+    top: 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__menu .header__contact-page:hover::after,
+  .header__menu .header__contact-page:focus::after {
+    left: 208px;
+    top: 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__active-page .header__home-page::after {
+    left: 8px;
+    top: 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__active-page .header__current-page::after {
+    left: 108px;
+    top: 36px;
+  }
+}

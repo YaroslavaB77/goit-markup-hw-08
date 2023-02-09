@@ -1,0 +1,118 @@
+.our-team {
+  background-color: rgba(245, 244, 250, 1);
+  padding: 0;
+
+  img {
+    width: 100%;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__item {
+    width: 95%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $main-background-color;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__position {
+    color: $descriprion-color;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  &__icon-border {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    box-shadow: none;
+  }
+
+  &__icon-border:hover,
+  &-team__icon-border:focus {
+    border: $main-background-color 1px solid;
+    border-radius: 50%;
+    background-color: $brand-color;
+    cursor: pointer;
+  }
+
+  &__icon-border:hover use,
+  &__icon-border:focus use {
+    fill: $main-background-color;
+  }
+
+  &__icon use {
+    fill: $icon-color;
+  }
+
+  &__icon:hover use,
+  &__icon:focus use {
+    fill: $main-background-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-team__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-team__item {
+    width: 47%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team__list {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team__item {
+    width: 270px;
+  }
+}
