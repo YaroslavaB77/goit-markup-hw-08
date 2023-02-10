@@ -1,0 +1,19 @@
+.logo {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+
+  &__secondary--color {
+    color: $brand-color;
+  }
+
+  &--bottom {
+    color: $main-background-color;
+    background: rgba(47, 48, 58, 1);
+  }
+}

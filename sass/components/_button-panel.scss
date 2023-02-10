@@ -1,0 +1,44 @@
+.button-panel {
+  margin-bottom: 50px;
+
+  & button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.03em;
+    width: 114px;
+    height: 38px;
+    border: none;
+    background-color: rgba(245, 244, 250, 1);
+  }
+
+  & button:hover,
+  & button:focus {
+    border: none;
+    background-color: $brand-color;
+    color: $main-background-color;
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__list button {
+    border-radius: 4px;
+    padding: 6px 22px;
+  }
+
+  &__shadow:hover,
+  &__shadow:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+}

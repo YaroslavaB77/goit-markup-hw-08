@@ -1,0 +1,135 @@
+.service {
+  background-color: rgba(47, 48, 58, 1);
+  color: $main-background-color;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+      270deg,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgba(47, 48, 58, 0.4) 100%
+    ),
+    url(../images/backgr-mobile@1x.jpg);
+  max-height: 400px;
+  max-width: 1600px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__phrase {
+    font-weight: 900;
+    font-size: 1.62rem;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.06em;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    max-width: 400px;
+    margin: 118px auto 30px;
+  }
+
+  &__button {
+    padding: 15px 41px 15px 42px;
+    align-self: center;
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    background: $brand-color;
+    border: 0 solid $brand-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: $main-background-color;
+    margin-bottom: 150px;
+  }
+
+  &__button:hover,
+  &__button:focus {
+    background-color: $main-background-color;
+    color: rgba(33, 33, 33, 1);
+    cursor: pointer;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .service {
+    background-image: linear-gradient(
+        270deg,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url(../images/backgr-mobile@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service {
+    max-width: 100%;
+    background-image: linear-gradient(
+        270deg,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url(../images/backgr-tablet@1x.jpg);
+    background-size: 768px cover;
+  }
+}
+
+@media (min-width: 768px) and (min-device-pixel-ratio: 2),
+  (min-width: 768px) and (min-resolution: 192dpi),
+  (min-width: 768px) and (min-resolution: 2dppx) {
+  .service {
+    background-image: linear-gradient(
+        270deg,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url(../images/backgr-tablet@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .service {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-height: 600px;
+    background-image: linear-gradient(
+        270deg,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url(../images/backgr-desktop@1x.jpg);
+    background-size: cover;
+  }
+
+  .service__button {
+    margin-bottom: 300px;
+  }
+
+  .service__phrase {
+    font-weight: 900;
+    font-size: 2.7rem;
+    line-height: 1.36;
+    margin-top: 280px;
+    max-width: 696px;
+  }
+}
+
+@media (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  (min-width: 1200px) and (min-resolution: 192dpi),
+  (min-width: 1200px) and (min-resolution: 2dppx) {
+  .service {
+    background-image: linear-gradient(
+        270deg,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url(../images/backgr-desktop@2x.jpg);
+  }
+}
